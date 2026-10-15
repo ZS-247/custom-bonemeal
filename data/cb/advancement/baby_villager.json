@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "get_mealed": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:bone_meal"
+        },
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:villager",
+            "minecraft:flags": {
+              "is_baby": true
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cb:entity_mealed/baby_villager"
+  },
+  "sends_telemetry_event": true
+}

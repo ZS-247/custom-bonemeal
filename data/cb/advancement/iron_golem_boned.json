@@ -1,0 +1,23 @@
+{
+  "criteria": {
+    "get_mealed_lol": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "item": {
+          "items": "minecraft:bone_meal"
+        },
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:iron_golem"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "cb:entity_mealed/iron_bone"
+  },
+  "sends_telemetry_event": true
+}
